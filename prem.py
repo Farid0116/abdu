@@ -80,25 +80,14 @@ async def send_welcome(message: types.Message):
 async def premium_info(message: types.Message):
     photo = types.InputFile("/storage/emulated/0/Download/premium.jpg")
     text = (
-        "<b>💸 Telegram Premium Narxlari</b>
-
-"
-        "🔓 <b>Profilga kirish orqali:</b>
-"
-        "◾ 1 oylik — 46.000 so'm
-"
-        "◾ 12 oylik — 290.000 so'm
-
-"
-        "🎁 <b>Gift sifatida olish:</b>
-"
-        "◾ 3 oylik — 170.000 so'm
-"
-        "◾ 6 oylik — 220.000 so'm
-"
-        "◾ 12 oylik — 400.000 so'm
-
-"
+        "<b>💸 Telegram Premium Narxlari</b>\n\n"
+        "🔓 <b>Profilga kirish orqali:</b>\n"
+        "◾ 1 oylik — 46.000 so'm\n"
+        "◾ 12 oylik — 290.000 so'm\n\n"
+        "🎁 <b>Gift sifatida olish:</b>\n"
+        "◾ 3 oylik — 170.000 so'm\n"
+        "◾ 6 oylik — 220.000 so'm\n"
+        "◾ 12 oylik — 400.000 so'm\n\n"
         "🔷 <i>Qadrdonlaringizga hadya qilishingiz mumkin.</i>"
     )
     buy_button = InlineKeyboardMarkup().add(
@@ -111,24 +100,13 @@ async def premium_info(message: types.Message):
 async def stars_info(message: types.Message):
     photo = types.InputFile("/storage/emulated/0/Download/stars.jpg")
     text = (
-        "<b>⭐ Telegram Stars Narxlari</b>
-
-"
-        "◾ 50 Stars — 15.000 so'm
-"
-        "◾ 75 Stars — 20.000 so'm
-"
-        "◾ 100 Stars — 30.000 so'm
-"
-        "◾ 150 Stars — 50.000 so'm
-
-"
-        "👨‍💻 <i>Admin bilan kelishilgan holda ko‘proq olish mumkin.</i>
-
-"
-        "🛒 <b>Sotib olish uchun admin:</b> @Darkness_premium
-
-"
+        "<b>⭐ Telegram Stars Narxlari</b>\n\n"
+        "◾ 50 Stars — 15.000 so'm\n"
+        "◾ 75 Stars — 20.000 so'm\n"
+        "◾ 100 Stars — 30.000 so'm\n"
+        "◾ 150 Stars — 50.000 so'm\n\n"
+        "👨‍💻 <i>Admin bilan kelishilgan holda ko‘proq olish mumkin.</i>\n\n"
+        "🛒 <b>Sotib olish uchun admin:</b> @Darkness_premium\n\n"
         "🔷 <i>Qadrdonlaringizga sovg‘a sifatida yuborishingiz mumkin.</i>"
     )
     buy_button = InlineKeyboardMarkup().add(
@@ -141,18 +119,10 @@ async def stars_info(message: types.Message):
 async def referal_bonus(message: types.Message):
     referal_link = f"https://t.me/{(await bot.get_me()).username}?start={message.from_user.id}"
     text = (
-        "<b>🎁 Sizga haligacha Telegram Premium sovg‘a qilishmadimi?</b>
-
-"
-        "➖ <b>Telegram Premium</b> obunani sovg‘a sifatida tekinga olishni istaysizmi?
-
-"
-        "Do‘stlaringizni taklif qiling. Har bir do‘stingiz uchun <b>300 so‘m</b> bonus oling.
-
-"
-        f"<b>Referal havolangiz:</b> {referal_link}
-
-"
+        "<b>🎁 Sizga haligacha Telegram Premium sovg‘a qilishmadimi?</b>\n\n"
+        "➖ <b>Telegram Premium</b> obunani sovg‘a sifatida tekinga olishni istaysizmi?\n\n"
+        "Do‘stlaringizni taklif qiling. Har bir do‘stingiz uchun <b>300 so‘m</b> bonus oling.\n\n"
+        f"<b>Referal havolangiz:</b> {referal_link}\n\n"
         "🔥 Do‘stlaringizni taklif qiling, sovg‘alarni oling!"
     )
     photo = types.InputFile("/storage/emulated/0/Download/premium.jpg")
@@ -165,10 +135,7 @@ async def referal_bonus(message: types.Message):
 @dp.message_handler(lambda message: message.text == "💳 Mening Hisobim")
 async def show_account(message: types.Message):
     bonus = get_balance(message.from_user.id)
-    await message.answer(f"💳 <b>Sizning hisobingiz</b>
-
-💰 Balans: {bonus} so'm
-🔓 Faol obuna: Mavjud emas.", parse_mode="HTML")
+    await message.answer(f"💳 <b>Sizning hisobingiz</b>\n\n💰 Balans: {bonus} so'm\n🔓 Faol obuna: Mavjud emas.", parse_mode="HTML")
 
 # Qolgan tugmalar...
 @dp.message_handler(lambda m: m.text == "👨‍💻 Administrator")
@@ -181,15 +148,11 @@ async def top_reyting(message: types.Message):
 
 @dp.message_handler(lambda m: m.text == "🎁 Bonus olish")
 async def bonus_info(message: types.Message):
-    await message.answer("🎁 <b>Bonus olish</b>
-
-Do‘stlaringizni taklif qiling va bonuslarni to‘plang!", parse_mode="HTML")
+    await message.answer("🎁 <b>Bonus olish</b>\n\nDo‘stlaringizni taklif qiling va bonuslarni to‘plang!", parse_mode="HTML")
 
 @dp.message_handler(lambda m: m.text == "📝 Qo'llanma")
 async def show_guide(message: types.Message):
-    await message.answer("📝 <b>Qo‘llanma</b>
-
-Tez orada qo‘llanma joylanadi.", parse_mode="HTML")
+    await message.answer("📝 <b>Qo‘llanma</b>\n\nTez orada qo‘llanma joylanadi.", parse_mode="HTML")
 
 # Run bot
 async def main():
