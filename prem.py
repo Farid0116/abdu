@@ -1,4 +1,3 @@
-
 import asyncio
 import logging
 import json
@@ -64,26 +63,17 @@ async def send_welcome(message: types.Message):
         add_referral(int(args), message.from_user.id)
 
     await message.answer(
-        "👋 <b>Salom, Abdurashid Premium botiga xush kelibsiz!</b>
-
-"
-        "💎 Bu yerda siz <b>Telegram Premium</b> xizmatini eng qulay narxlarda sotib olishingiz mumkin.
-
-"
-        "⚡️ <b>Afzalliklar:</b>
-"
-        "✅ Tez va ishonchli to‘lov
-"
-        "✅ Sovg‘a sifatida yuborish imkoniyati
-"
-        "✅ 100% kafolatlangan aktivatsiya
-
-"
-        "📌 Premium narxlarini ko‘rish uchun menyudan foydalaning.
-
-"
-        "🛒 <b>Buyurtma uchun admin:</b> @Darkness_premium", parse_mode="HTML", reply_markup=menu_kb
-    )
+    "👋 <b>Salom, Abdurashid Premium botiga xush kelibsiz!</b>\n\n"
+    "💎 Bu yerda siz <b>Telegram Premium</b> xizmatini eng qulay narxlarda sotib olishingiz mumkin.\n\n"
+    "⚡️ <b>Afzalliklar:</b>\n"
+    "✅ Tez va ishonchli to‘lov\n"
+    "✅ Sovg‘a sifatida yuborish imkoniyati\n"
+    "✅ 100% kafolatlangan aktivatsiya\n\n"
+    "📌 Premium narxlarini ko‘rish uchun menyudan foydalaning.\n\n"
+    "🛒 <b>Buyurtma uchun admin:</b> @Darkness_premium",
+    parse_mode="HTML",
+    reply_markup=menu_kb
+)
 
 # 💸 Premium Narxlar
 @dp.message_handler(lambda message: message.text == "💸 Premium Narxlar")
