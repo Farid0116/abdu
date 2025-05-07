@@ -82,12 +82,12 @@ async def premium_info(message: types.Message):
     text = (
         "<b>💸 Telegram Premium Narxlari</b>\n\n"
         "🔓 <b>Profilga kirish orqali:</b>\n"
-        "◾ 1 oylik — 46.000 so'm\n"
-        "◾ 12 oylik — 290.000 so'm\n\n"
+        "◾ 1 oylik — 55.000 so'm\n"
+        "◾ 12 oylik — 310.000 so'm\n\n"
         "🎁 <b>Gift sifatida olish:</b>\n"
-        "◾ 3 oylik — 170.000 so'm\n"
-        "◾ 6 oylik — 220.000 so'm\n"
-        "◾ 12 oylik — 400.000 so'm\n\n"
+        "◾ 3 oylik — 190.000 so'm\n"
+        "◾ 6 oylik — 250.000 so'm\n"
+        "◾ 12 oylik — 420.000 so'm\n\n"
         "🔷 <i>Qadrdonlaringizga hadya qilishingiz mumkin.</i>"
     )
     buy_button = InlineKeyboardMarkup().add(
@@ -121,7 +121,7 @@ async def referal_bonus(message: types.Message):
     text = (
         "<b>🎁 Sizga haligacha Telegram Premium sovg‘a qilishmadimi?</b>\n\n"
         "➖ <b>Telegram Premium</b> obunani sovg‘a sifatida tekinga olishni istaysizmi?\n\n"
-        "Do‘stlaringizni taklif qiling. Har bir do‘stingiz uchun <b>300 so‘m</b> bonus oling.\n\n"
+        "Do‘stlaringizni taklif qiling. Har bir do‘stingiz uchun <b>500 so‘m</b> bonus oling.\n\n"
         f"<b>Referal havolangiz:</b> {referal_link}\n\n"
         "🔥 Do‘stlaringizni taklif qiling, sovg‘alarni oling!"
     )
